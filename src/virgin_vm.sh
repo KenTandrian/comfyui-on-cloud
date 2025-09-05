@@ -31,7 +31,8 @@ sudo apt-get -y install cuda-toolkit-13-0
 source ~/.bashrc
 
 # Install PyTorch
-pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
+# https://pytorch.org/get-started/locally
+pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu129
 echo -e "import torch\nprint(torch.cuda.is_available())\nprint(torch.cuda.get_device_name(0))" > test_cuda.py
 python test_cuda.py
 
